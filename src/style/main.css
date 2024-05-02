@@ -17,7 +17,7 @@ body {
 .visual,
 .main,
 .slogan,
-.footer {
+.footer-inner {
   width: var(--container-size, 940px);
   margin: 0 auto;
 }
@@ -25,24 +25,42 @@ body {
 /* 헤더 */
 .header {
   background-color: yellow;
+  height: 10vh;
 }
 
 /* 비주얼 */
 .visual {
   background-color: lightcoral;
+  height: 10vh;
 }
 
 /* 메인 */
+/* display: flex를 사용하여 flex container로 변경됨 flex 안에 있는 속성들은 flex item이 됨 */
 .main {
   background-color: skyblue;
+  height: 60vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start; /*메인 축*/
+  align-items: stretch; /*교차 축*/
+}
+
+.group {
+  border: 1px solid red;
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lime;
+  height: 10vh;
 }
 
 /* 푸터 */
 .footer {
   background-color: orange;
+}
+
+.footer-inner {
+  background-color: yellow;
+  height: 10vh;
 }
