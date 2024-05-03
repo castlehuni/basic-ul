@@ -9,6 +9,16 @@
   --container-size: 940px;
 }
 
+/* 버튼 스타일 */
+button,
+a {
+  width: 100px;
+  padding: 20px;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  display: inline-block;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
 }
@@ -26,6 +36,7 @@ body {
 .header {
   background-color: yellow;
   height: 10vh;
+  padding: 0 50px;
 }
 
 /* 비주얼 */

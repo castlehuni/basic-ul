@@ -45,6 +45,7 @@ select {
 html {
   box-sizing: border-box;
 }
+/* 모든 박스를 가장 상위 단계인 html에서 상속 받아라 */
 *,
 *::before,
 *::after {
