@@ -38,12 +38,9 @@ body {
 /* display: flex를 사용하여 flex container로 변경됨 flex 안에 있는 속성들은 flex item이 됨 */
 .main {
   background-color: skyblue;
-  height: 60vh;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between; /*메인 축 정렬*/
-  align-items: stretch; /*교차 축 정렬*/
-  padding: 28px 16px 36px;
+  /* border: 10px solid black; */
+  display: flow-root;
+  min-height: 442px;
 }
 
 .group {
@@ -52,22 +49,26 @@ body {
 
 .group1 {
   width: 250px;
-  order: 1;
+  float: left;
+  background-color: orange;
 }
 
 .group2 {
   width: 380px;
+  float: left;
+  background-color: silver;
 }
 
 .group3 {
   width: 190px;
-  order: -1;
+  float: left;
 }
 
 /* 슬로건 */
 .slogan {
   background-color: lime;
   height: 10vh;
+  clear: both;
 }
 
 /* 푸터 */
