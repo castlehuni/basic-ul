@@ -1,16 +1,20 @@
-/* body {
-  background-color: yellow;
-  font-family: "SUIT Variable", sans-serif;
-  font-weight: 100;
-} */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
-
 :root {
   --container-size: 940px;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "SUIT Variable", sans-serif;
+  background-color: #ccc;
+  background-image: url(/src/images/bg_flower.png),
+    linear-gradient(to bottom, #aaa 0%, #ccc 30%);
+  background-repeat: no-repeat;
+  background-position: 50% 0, 0 0;
 }
 
 .header,
@@ -24,7 +28,7 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: darkblue;
+  background-color: #fff;
   height: 120px;
   padding: 0 50px;
   border-radius: 0 0 15px 15px;
@@ -41,14 +45,40 @@ body {
 
 /* 비주얼 */
 .visual {
-  background-color: lightcoral;
-  height: 10vh;
+  height: 120px;
+  block-size: 120px;
+  position: relative;
+}
+
+.visual::before,
+.visual::after {
+  content: "";
+  width: inherit;
+  inline-size: inherit;
+  height: inherit;
+  block-size: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+}
+
+.visual::before {
+  background-image: url(/src/images/ani_flower_01.png),
+    url(/src/images/ani_flower_02.png);
+  background-position: 0 -10px, 600px 10px;
+}
+
+.visual::after {
+  background-image: url(/src/images/ani_flower_03.png),
+    url(/src/images/ani_flower_04.png);
+  background-position: 300px 0px, 800px 30px;
 }
 
 /* 메인 */
 /* display: flex를 사용하여 flex container로 변경됨 flex 안에 있는 속성들은 flex item이 됨 */
 .main {
-  background-color: skyblue;
+  background-color: #fff;
   /* border: 10px solid black; */
   display: flow-root;
   min-height: 442px;
