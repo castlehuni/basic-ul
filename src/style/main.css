@@ -43,6 +43,14 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  margin: 0;
+  font-size: 1em;
+  a,
+  img {
+    display: block;
+    /* 인라인 상자 정렬 */
+    /* vertical-align: middle; */
+  }
 }
 
 /* 텍스트 링크 모음 */
