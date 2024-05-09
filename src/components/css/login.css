@@ -11,16 +11,17 @@
   display: flex;
   flex-flow: row nowrap;
   gap: var(--spacing);
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  align-items: center;
 
   label {
     white-space: nowrap;
   }
 
-  /* border: 1px solid var(--border-color); */
   input {
     flex-grow: 1;
     border: 0;
+    border: 1px solid var(--border-color);
     border-radius: var(--radius);
     padding: 1px 1px 1px 8px;
     height: 24px;
@@ -29,9 +30,9 @@
   }
 }
 
-.form-input:focus-within {
+/* .form-input:focus-within {
   border-bottom: 1px solid var(--orange-100);
-}
+} */
 
 /* button 컴포넌트 */
 .button {
