@@ -1,0 +1,35 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body {
+  margin: 50px;
+}
+
+.menu {
+  background: orangered linear-gradient(to bottom, orange, orangered, orange);
+  box-shadow: 0 -5px 0 0 #121212;
+  color: #fff;
+  display: flow-root;
+  padding-left: 225px;
+
+  > li {
+    float: left;
+    border-left: 2px solid white;
+  }
+
+  button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 24px;
+    height: 60px;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  }
+
+  ul {
+    display: none;
+  }
+}
