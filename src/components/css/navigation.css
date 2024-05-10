@@ -73,6 +73,7 @@ body {
     }
   }
 
+  /* 위의 is--active에서 색 변경 대체 예시 */
   /* button[aria-expanded="true"]{
     color: lime;
   } */
@@ -95,6 +96,7 @@ body {
     }
   }
 
+  /* 위의 is--active에서 display:block 대체 예시 */
   /* ul[aria-hidden="false"]{
     display: block;
   } */
