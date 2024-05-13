@@ -1,0 +1,33 @@
+@import url(/style/base.css);
+
+.pagination {
+  display: flex;
+  flex-flow: row nowrap;
+  column-gap: 0.5rem;
+
+  div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    flex: 1 1 0;
+
+    a {
+      color: gray;
+      padding: 0.5rem 1rem;
+
+      &.is-selected {
+        color: darkblue;
+        font-weight: 700;
+      }
+    }
+  }
+
+  button {
+    border-radius: 50%;
+    background-color: transparent;
+    color: grey;
+    border: 0;
+    padding: 0;
+    flex: 0 0 2rem;
+  }
+}
