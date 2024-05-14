@@ -1,0 +1,22 @@
+.rwd-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.rwd-svg {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  background-color: yellow;
+  margin: 0;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.box {
+  width: 50%;
+}
