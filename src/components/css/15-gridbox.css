@@ -1,77 +1,59 @@
 @import url(./defalut.css);
 
-body {
-  margin: 50px;
-}
-
 .container {
-  border: 10px solid black;
+  border: 10px solid blue;
+  height: 600px;
+  margin: 0 auto;
+  width: 1000px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* grid-auto-columns: minmax(50px, 1fr); */
+  grid-template-columns: repeat(6, 100px);
   grid-auto-rows: minmax(50px, auto);
-  /* grid-template-rows: repeat(10, minmax(50px, auto)); */
   grid-auto-flow: dense;
-  gap: 20px;
-  grid-template-areas:
-    "cell-1 cell-1 cell-2 cell-3"
-    "cell-1 cell-1 cell-2 cell-3"
-    "cell-1 cell-1 cell-4 cell-4"
-    ". . cell-4 cell-4";
+  gap: 10px;
+  align-items: start;
+  justify-content: center;
+  align-content: center;
+  /* justify-items: center;
+  align-items: center; */
 
-  /* div:nth-child(odd) {
+  .grid-cell7 {
+    /* justify-self: end;
+    align-items: end; */
+  }
+
+  .grid-cell2,
+  .grid-cell10 {
+    grid-area: 1/3/5/4 !important;
+    background-color: transparent !important;
+  }
+
+  .grid-cell2 {
+    justify-self: start;
+    align-self: start;
+  }
+
+  .grid-cell10 {
+    justify-self: end;
+    align-self: end;
+  }
+
+  div:nth-child(odd) {
     grid-column: span 2;
   }
 
   div:nth-child(even) {
     grid-row: span 2;
-  } */
-}
+  }
 
-/* 라인 기반 배치 */
-/* .grid-cell1 {
-  grid-row-start: 3;
-  grid-column-start: 2;
-  grid-row-end: 5;
-  grid-column-end: 4;
-}
+  img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: all 400ms;
 
-.grid-cell2 {
-  grid-row: 8/11;
-  grid-column: 5/6;
-  grid-row-start: 8;
-  grid-column-start: 5;
-  grid-row-end: 11;
-  grid-column-end: 6;
-}
-
-.grid-cell3 {
-  grid-row: 7/9;
-  grid-column: 2/4;
-
-  grid-area: 7/2/9/4;
-}
-
-.grid-cell4 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.grid-cell5 {
-  grid-row: 6/7;
-  grid-column: 1 / -1;
-} */
-
-/* name 기반 배치 */
-.grid-cell1 {
-  grid-area: cell-1;
-}
-.grid-cell2 {
-  grid-area: cell-2;
-}
-.grid-cell3 {
-  grid-area: cell-3;
-}
-.grid-cell4 {
-  grid-area: cell-4;
+    &:hover {
+      scale: 1.5;
+    }
+  }
 }
