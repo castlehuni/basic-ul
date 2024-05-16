@@ -1,10 +1,15 @@
+@import url(/style/reset.css);
+@import url(/style/base.css);
 @import url(./grid.css);
+
+body {
+  margin-top: 50px;
+}
 
 .header,
 .navigation,
 .footer {
   height: 100px;
-  block-size: 50px;
   width: 100%;
 }
 
@@ -22,10 +27,86 @@
   gap: 24px;
 }
 
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+}
+
+/* 햄버거 버튼 */
+.burger-button {
+  background: red;
+  padding: 0;
+  border: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 10;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  span {
+    width: 100%;
+    height: 20%;
+    background: #fff;
+    border-radius: 20px;
+    transition: all 200ms;
+  }
+
+  .burger-bar-top {
+  }
+
+  .burger-bar-middle {
+  }
+
+  .burger-bar-bottom {
+  }
+}
+
+.burger-button.is-active {
+  overflow: hidden;
+  justify-content: center;
+  span {
+  }
+
+  .burger-bar-top,
+  .burger-bar-bottom {
+  }
+
+  .burger-bar-top {
+    translate: 0 100%;
+    rotate: 45deg;
+  }
+
+  .burger-bar-middle {
+    translate: -100% 0;
+  }
+
+  .burger-bar-bottom {
+    translate: 0 -100%;
+    rotate: -45deg;
+  }
+}
+
 /* navigation */
 .menu {
   position: fixed;
-  background-color: yellow;
+  background-color: orange;
   top: 0;
   left: 0;
+  width: 70%;
+  height: 100vh;
+  translate: -100% 0;
+  transition-property: translate, background;
+  transition-duration: 2000ms;
+  transition-delay: 0ms, 4000ms;
+  transition-timing-function: ease-in-out;
+  /* transition: translate 2000ms 1000ms ease-in-out; */
+  /* transition: translate 2000ms 1000ms ease-in-out,
+    background 2000ms 2000ms ease-in-out; */
+
+  &.is-active {
+    translate: 0 0;
+    background-color: purple;
+  }
 }
