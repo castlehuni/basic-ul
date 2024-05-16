@@ -2,10 +2,6 @@
 @import url(/style/base.css);
 @import url(./grid.css);
 
-body {
-  margin-top: 50px;
-}
-
 .header,
 .navigation,
 .footer {
@@ -27,23 +23,24 @@ body {
   gap: 24px;
 }
 
-.header {
+/* .header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: end;
-}
+} */
 
 /* 햄버거 버튼 */
 .burger-button {
-  background: red;
+  background: transparent;
   padding: 0;
   border: 0;
-  width: 100px;
-  height: 100px;
+  width: 24px;
+  height: 24px;
   z-index: 10;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 100%;
+  overflow: hidden;
 
   span {
     width: 100%;
@@ -65,29 +62,31 @@ body {
   .burger-bar-bottom {
     align-self: end;
   }
-}
 
-.burger-button.is-active {
-  overflow: hidden;
+  &.is-active {
+    span {
+    }
 
-  span {
+    .burger-bar-top,
+    .burger-bar-bottom {
+      align-self: center;
+    }
+
+    .burger-bar-top {
+      rotate: 45deg;
+    }
+
+    .burger-bar-middle {
+      translate: -100% 0;
+    }
+
+    .burger-bar-bottom {
+      rotate: -45deg;
+    }
   }
 
-  .burger-bar-top,
-  .burger-bar-bottom {
-    align-self: center;
-  }
-
-  .burger-bar-top {
-    rotate: 45deg;
-  }
-
-  .burger-bar-middle {
-    translate: -100% 0;
-  }
-
-  .burger-bar-bottom {
-    rotate: -45deg;
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 
@@ -112,4 +111,22 @@ body {
     translate: 0 0;
     background-color: purple;
   }
+}
+
+.logo {
+  background-color: blue;
+  background-image: image-set(
+    url(/images/webcafe-logo.png) 1x,
+    url(./../../images/webcafe-logo@2x.png) 2x
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 20%;
+  aspect-ratio: 1/0.28921568627450983;
+}
+
+.book {
+  background-image: url(./../../apple/apple_watch.jpeg);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
 }
