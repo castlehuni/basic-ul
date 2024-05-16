@@ -1,0 +1,31 @@
+@import url(./grid.css);
+
+.header,
+.navigation,
+.footer {
+  height: 100px;
+  block-size: 50px;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 0 auto;
+  max-width: 90%;
+  width: 100%;
+  gap: 24px;
+}
+
+/* navigation */
+.menu {
+  position: fixed;
+  background-color: yellow;
+  top: 0;
+  left: 0;
+}
